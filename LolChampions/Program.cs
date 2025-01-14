@@ -35,11 +35,14 @@ namespace LolChampions
 
             //5.feladat
             {
-                Console.WriteLine(
-                    champions.Where(c => c.Classes.SingleOrDefault() == "Mage").Count() > champions.Where(c => c.Classes.SingleOrDefault() == "Support").Count() 
-                    ? "Mage" 
-                    : "Support"
-                    );
+                var lol = champions.Where(c => c.Classes.SingleOrDefault() == "Mage");
+                var adsf = champions.Where(c => c.Classes.SingleOrDefault() == "Support");
+
+            }
+
+            //6.feladat
+            {
+                champions.OrderBy(c => c.Numbers[3]).First();
             }
         }
     }
